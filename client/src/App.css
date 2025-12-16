@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+
+.mainContainer {
+    background-color:#c30010;
+    display:flex;
+    flex-direction:column;
+}
+
+.header {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0000FF;
+    height:150px;
+}
+
+.dashContainer {
+    background-color: #00FF00;
+}
+
