@@ -71,9 +71,8 @@ function demoSplit(arr) {
         const bucket = bucketMap.get(key);
         bucket.count += 1;
         bucket.spendTotal += spend;
-        bucket.spendAvg = Number(
-            (bucket.spendTotal/bucket.count).toFixed(2)
-        );
+        bucket.spendAvg = Math.round((bucket.spendTotal/bucket.count)*100)/100;
+        bucket.spendTotal = Math.round(bucket.spendTotal *100)/100;
     }
     const unordered = Array.from(bucketMap.values());
     const genderOrder = ["M","W"];

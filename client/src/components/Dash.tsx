@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
 import DashDisplay from './DashDisplays';
-
+import PieChart from "./PieChart";
 
 type DashProps = {
     data: any;
@@ -14,8 +14,8 @@ let totalSpend= ""
 let avgSpend=""
     return (
         <>
-            <div className = "flex-row">
-                <div className = "flex justify-center">
+            <div className = "flex flex-row bg-red-500 justify-content-center">
+                <div className = "flex justify-center bg-green-400 w-150">
                     <div className=" grid grid-cols-[100px_repeat(2,180px)] grid-rows-[60px_repeat(5,180px) p-8]" >
                         <div></div>
                         <p className="text-3xl font-bold text-gray-800 mb-4">MEN</p>
@@ -77,8 +77,8 @@ let avgSpend=""
                         />
                     </div>
                 </div>
-                <div>
-                    TEST
+                <div className="bg-blue-600 w-250">
+                    <PieChart/>
                 </div>
             </div>
         </>
