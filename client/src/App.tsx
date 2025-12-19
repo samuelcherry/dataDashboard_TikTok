@@ -20,10 +20,10 @@ function App() {
         })
         .then((res) => res.json())
         .then((data) => {
-        console.log("data_01: ", data);
+       // console.log("data_01: ", data.data.processed.locationSplit);
         setData(data);
         })
-        };
+    };
 
 return (
     	<>

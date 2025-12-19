@@ -5,20 +5,20 @@ Chart.register(ArcElement, Tooltip, Legend);
 
 
 const PieChart: React.FC = ({data, selection,title}) => {
-    
+    const genderSplit = data.data.processed.genderSplit 
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const chartRef = useRef<Chart | null>(null);
     
-    const data00 = data.data.processed[0][selection]
-    const data01 = data.data.processed[1][selection]
-    const data02 = data.data.processed[2][selection]
-    const data03 = data.data.processed[3][selection]
-    const data04 = data.data.processed[4][selection]
-    const data05 = data.data.processed[5][selection]
-    const data06 = data.data.processed[6][selection]
-    const data07 = data.data.processed[7][selection]
-    const data08 = data.data.processed[8][selection]
-    const data09 = data.data.processed[9][selection]
+    const data00 = genderSplit[0][selection]
+    const data01 = genderSplit[1][selection]
+    const data02 = genderSplit[2][selection]
+    const data03 = genderSplit[3][selection]
+    const data04 = genderSplit[4][selection]
+    const data05 = genderSplit[5][selection]
+    const data06 = genderSplit[6][selection]
+    const data07 = genderSplit[7][selection]
+    const data08 = genderSplit[8][selection]
+    const data09 = genderSplit[9][selection]
 
 
     useEffect(() => {

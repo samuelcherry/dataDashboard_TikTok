@@ -12,6 +12,7 @@ export default function DashContainer({data}: DashProps) {
 let count = ""
 let totalSpend= ""
 let avgSpend=""
+let genderSplit = data.data.processed.genderSplit
     return (
         <>
             <div className = "flex flex-row bg-red-500 justify-content-center">
@@ -22,58 +23,58 @@ let avgSpend=""
                         <p className="text-3xl font-bold text-gray-800 mb-4">WOMEN</p>
                         <p className="text-3xl font-bold text-gray-800 mb-4">Under 25</p>
                         <DashDisplay
-                            count={data.data.processed[5].count}
-                            totalSpend={data.data.processed[5].spendTotal}
-                            avgSpend={data.data.processed[5].spendAvg}
+                            count={genderSplit[5].count}
+                            totalSpend={genderSplit[5].spendTotal}
+                            avgSpend={genderSplit[5].spendAvg}
                         />
                         <DashDisplay
-                            count={data.data.processed[0].count}
-                            totalSpend={data.data.processed[0].spendTotal}
-                            avgSpend={data.data.processed[0].spendAvg}
+                            count={genderSplit[0].count}
+                            totalSpend={genderSplit[0].spendTotal}
+                            avgSpend={genderSplit[0].spendAvg}
                         />
                         <p className="text-3xl font-bold text-gray-800 mb-4">25-34</p>
                         <DashDisplay
-                            count={data.data.processed[6].count}
-                            totalSpend={data.data.processed[6].spendTotal}
-                            avgSpend={data.data.processed[6].spendAvg}
+                            count={genderSplit[6].count}
+                            totalSpend={genderSplit[6].spendTotal}
+                            avgSpend={genderSplit[6].spendAvg}
                         />
                         <DashDisplay
-                            count={data.data.processed[1].count}
-                            totalSpend={data.data.processed[1].spendTotal}
-                            avgSpend={data.data.processed[1].spendAvg}
+                            count={genderSplit[1].count}
+                            totalSpend={genderSplit[1].spendTotal}
+                            avgSpend={genderSplit[1].spendAvg}
                         />
                         <p className="text-3xl font-bold text-gray-800 mb-4">35-44</p>
                         <DashDisplay
-                            count={data.data.processed[7].count}
-                            totalSpend={data.data.processed[7].spendTotal}
-                            avgSpend={data.data.processed[7].spendAvg}
+                            count={genderSplit[7].count}
+                            totalSpend={genderSplit[7].spendTotal}
+                            avgSpend={genderSplit[7].spendAvg}
                         />
                         <DashDisplay
-                            count={data.data.processed[2].count}
-                            totalSpend={data.data.processed[2].spendTotal} 
-                            avgSpend={data.data.processed[2].spendAvg}
+                            count={genderSplit[2].count}
+                            totalSpend={genderSplit[2].spendTotal} 
+                            avgSpend={genderSplit[2].spendAvg}
                         />
                         <p className="text-3xl font-bold text-gray-800 mb-4">45-54</p>
                         <DashDisplay
-                            count={data.data.processed[8].count}
-                            totalSpend={data.data.processed[8].spendTotal}
-                            avgSpend={data.data.processed[8].spendAvg}
+                            count={genderSplit[8].count}
+                            totalSpend={genderSplit[8].spendTotal}
+                            avgSpend={genderSplit[8].spendAvg}
                         />
                         <DashDisplay
-                            count={data.data.processed[3].count}
-                            totalSpend={data.data.processed[3].spendTotal} 
-                            avgSpend={data.data.processed[3].spendAvg}
+                            count={genderSplit[3].count}
+                            totalSpend={genderSplit[3].spendTotal} 
+                            avgSpend={genderSplit[3].spendAvg}
                         />
                          <p className="text-3xl font-bold text-gray-800 mb-4">55+</p>
                         <DashDisplay
-                            count={data.data.processed[9].count}
-                            totalSpend={data.data.processed[9].spendTotal}
-                            avgSpend={data.data.processed[9].spendAvg}
+                            count={genderSplit[9].count}
+                            totalSpend={genderSplit[9].spendTotal}
+                            avgSpend={genderSplit[9].spendAvg}
                         />
                         <DashDisplay
-                            count={data.data.processed[4].count}
-                            totalSpend={data.data.processed[4].spendTotal} 
-                            avgSpend={data.data.processed[4].spendAvg}
+                            count={genderSplit[4].count}
+                            totalSpend={genderSplit[4].spendTotal} 
+                            avgSpend={genderSplit[4].spendAvg}
                         />
                     </div>
                 </div>

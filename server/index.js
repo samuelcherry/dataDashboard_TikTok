@@ -4,6 +4,7 @@ const csvParser = require('csv-parser');
 const fs = require('fs');
 const cors = require('cors');
 const demoSplit = require('./demoSplit');
+const stateSplit = require("./stateSplit");
 
 const app = express();
 const port = 3000;
@@ -19,7 +20,9 @@ app.post("/upload", upload.single("file"), (req,res) => {
     .on("data", (row) => results.push(row))
     .on("end", async() => {
         try{
-            const processed = await demoSplit(results);
+            const genderSplit = await demoSplit(results);
+            const locationSplit = await stateSplit(results);
+            const processed = {genderSplit :genderSplit, locationSplit:locationSplit};
             res.json({
                 success: true,
                 data: {processed}
@@ -31,10 +34,6 @@ app.post("/upload", upload.single("file"), (req,res) => {
     });
 });
 
-app.get("/api/message", (req,res) => {
-    console.log("GET /api/message sending:", processed);
-    res.json(processed);
-});
 
 
 
