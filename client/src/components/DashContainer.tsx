@@ -13,9 +13,13 @@ let avgSpend=""
 let genderSplit = data.data.processed.genderSplit
     return (
         <>
-            <div className = "flex flex-row bg-red-500 justify-content-center">
-                <div className = "flex justify-center bg-green-400 w-150">
-                    <div className=" grid grid-cols-[100px_repeat(2,180px)] grid-rows-[60px_repeat(5,180px) p-8]" >
+            <div className = "flex flex-row justify-content-center">
+                <div className = "flex justify-center">
+                    <div className="grid grid-cols-[100px_repeat(2,130px)]
+                                    grid-rows-[60px_repeat(5,180px) p-4]
+                                    bg-white p-4 mt-4 mb-4 rounded-lg
+                                    shadow-lg
+                        " >
                         <div></div>
                         <p className="text-3xl font-bold text-gray-800 mb-4">MEN</p>
                         <p className="text-3xl font-bold text-gray-800 mb-4">WOMEN</p>
@@ -30,7 +34,7 @@ let genderSplit = data.data.processed.genderSplit
                             totalSpend={genderSplit[0].spendTotal}
                             avgSpend={genderSplit[0].spendAvg}
                         />
-                        <p className="text-3xl font-bold text-gray-800 mb-4">25-34</p>
+                        <p className="text-3xl font-bold text-gray-800 mb-4 align-center ">25-34</p>
                         <DashDisplay
                             count={genderSplit[6].count}
                             totalSpend={genderSplit[6].spendTotal}

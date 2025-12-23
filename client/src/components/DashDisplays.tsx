@@ -11,7 +11,7 @@ export default function DashDisplay({count, totalSpend, avgSpend}) {
 }
 function StatBox({title, value}){
     return (
-        <div className="relative rounded-lg border border-gray-300 bg-white px-3 pb-3 pt-3 m-4 w-32">
+        <div className="relative rounded-lg border box-shadow-10 border-gray-300 bg-white px-3 pb-3 mb-3 pt-3 w-32">
             <span className="absolute -top-2 left-3 bg-white px-1 text-xs font-medium text-gray-500">
                 {title}
             </span>

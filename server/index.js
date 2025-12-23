@@ -5,6 +5,7 @@ const fs = require('fs');
 const cors = require('cors');
 const demoSplit = require('./demoSplit');
 const stateSplit = require("./stateSplit");
+const monthSplit = require("./monthSplit");
 
 const app = express();
 const port = 3000;
@@ -22,7 +23,9 @@ app.post("/upload", upload.single("file"), (req,res) => {
         try{
             const genderSplit = await demoSplit(results);
             const locationSplit = await stateSplit(results);
-            const processed = {genderSplit :genderSplit, locationSplit:locationSplit};
+            const dateSplit = await monthSplit(results);
+            
+            const processed = {genderSplit :genderSplit, locationSplit:locationSplit, dateSplit:dateSplit};
             res.json({
                 success: true,
                 data: {processed}

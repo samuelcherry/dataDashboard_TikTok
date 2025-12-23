@@ -2,6 +2,8 @@ import {useEffect, useState} from 'react';
 import DashContainer from './DashContainer';
 import PieChart from "./PieChart";
 import BarChart from "./BarChart";
+import LineChart from "./LineChart";
+
 
 type DashProps = {
     data: any;
@@ -14,8 +16,8 @@ let totalSpend= ""
 let avgSpend=""
     return (
         <>
-            <div className = "flex flex-row bg-red-500 justify-content-center">
-                <div className = "flex justify-center bg-green-400 w-150">
+            <div className = "flex flex-row bg-gray-200">
+                <div className = "flex justify-center w-120">
                     <DashContainer data={data}/> 
                 </div>
                 <div>
@@ -26,7 +28,7 @@ let avgSpend=""
                             selection="spendTotal"
                         />
                     </div>
-                    <div className="bg-blue-600 flex flex-row justify-between">
+                    <div className="flex flex-row justify-between">
                         <div className="m-5">
                             <PieChart
                                 data={data}
@@ -40,6 +42,15 @@ let avgSpend=""
                                 title="Total spend"
                                 selection="spendTotal"
                             />
+                        </div>
+                    </div>
+                    <div>
+                        <div className="m-4 bg-white rounded-lg shadow-lg w-250 h-75">
+                        <LineChart
+                            data={data}
+                            title="Sales over time"
+                            selection="spendTotal"
+                        />
                         </div>
                     </div>
                 </div>

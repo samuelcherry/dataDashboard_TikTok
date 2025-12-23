@@ -1,0 +1,101 @@
+id,gender,age,spend,location,month
+0001,F,89,299.74,Texas,Apr
+0002,F,37,18.27,Michigan,Nov
+0003,F,25,148.67,Florida,Nov
+0004,F,54,193.63,California,Sep
+0005,M,20,26.52,Iowa,Oct
+0006,M,33,178.49,Maryland,Sep
+0007,F,48,23.83,Utah,Jan
+0008,F,41,157.51,California,Apr
+0009,F,73,260.98,Alabama,Aug
+0010,F,29,253.15,Michigan,Feb
+0011,F,18,100.62,Maryland,Sep
+0012,M,44,202.29,Tennessee,Mar
+0013,F,60,27.56,Iowa,Oct
+0014,M,20,210.24,Texas,Dec
+0015,M,20,167.72,Minnesota,Dec
+0016,F,59,140.17,Alabama,May
+0017,M,21,103.92,Texas,Nov
+0018,F,24,151.56,Missouri,Nov
+0019,M,90,119.63,Arizona,Dec
+0020,F,91,254.23,Pennsylvania,Dec
+0021,F,24,233.46,Pennsylvania,Apr
+0022,M,21,227.2,New Jersey,Sep
+0023,F,54,41.76,Michigan,Nov
+0024,F,21,19.02,Missouri,Oct
+0025,M,19,275.63,Michigan,Apr
+0026,F,97,105.0,Kansas,Nov
+0027,M,23,15.67,Colorado,Dec
+0028,F,57,222.5,Alaska,Nov
+0029,F,53,23.69,Arkansas,Sep
+0030,F,23,51.64,New Jersey,Oct
+0031,M,41,124.97,Arizona,Nov
+0032,F,18,222.84,Nebraska,Nov
+0033,M,63,77.24,Illinois,Dec
+0034,M,49,290.13,Tennessee,Mar
+0035,M,96,76.57,Kentucky,Dec
+0036,F,51,202.32,California,Dec
+0037,F,22,219.46,New York,Aug
+0038,M,25,186.36,Florida,Aug
+0039,F,18,66.01,Virginia,Apr
+0040,M,26,124.17,South Carolina,Feb
+0041,M,21,59.61,Minnesota,Apr
+0042,F,44,174.04,California,Oct
+0043,M,42,8.07,Montana,Aug
+0044,F,78,278.94,Texas,Dec
+0045,F,39,88.27,Alabama,Jan
+0046,F,61,168.69,California,Feb
+0047,F,20,275.24,New York,Nov
+0048,F,24,70.08,Ohio,Aug
+0049,M,22,99.87,Tennessee,Aug
+0050,F,41,38.62,Washington,May
+0051,F,49,238.43,Nevada,Nov
+0052,F,23,261.37,Missouri,Jun
+0053,F,84,39.6,North Carolina,Apr
+0054,F,73,286.81,Tennessee,Nov
+0055,M,39,29.68,Massachusetts,Apr
+0056,M,42,105.29,Oklahoma,Mar
+0057,M,29,37.96,California,Dec
+0058,M,20,152.28,Missouri,Dec
+0059,F,23,262.44,Minnesota,Dec
+0060,M,23,92.39,Florida,Nov
+0061,M,25,296.33,Pennsylvania,Jun
+0062,F,80,224.62,Florida,Sep
+0063,M,21,6.73,New Jersey,Jun
+0064,F,23,237.07,Michigan,Nov
+0065,F,53,205.99,Ohio,Sep
+0066,F,97,24.78,Washington,Oct
+0067,M,25,297.56,North Carolina,Jun
+0068,F,19,98.04,Texas,Dec
+0069,F,23,49.0,Florida,Mar
+0070,F,57,134.04,California,Dec
+0071,F,36,173.03,Florida,Dec
+0072,F,34,251.24,Virginia,Aug
+0073,F,52,281.69,Maine,Dec
+0074,F,18,219.44,Wisconsin,Nov
+0075,F,89,267.98,North Dakota,Sep
+0076,F,33,155.07,California,Dec
+0077,F,22,258.71,South Carolina,May
+0078,F,26,101.85,Texas,Dec
+0079,F,46,158.81,Michigan,Dec
+0080,M,18,244.79,Texas,Sep
+0081,F,74,50.42,Arizona,Aug
+0082,F,48,283.85,Ohio,Sep
+0083,M,61,34.14,California,Mar
+0084,F,60,64.92,Iowa,Jun
+0085,F,18,249.79,New York,Oct
+0086,F,34,155.05,California,Apr
+0087,F,25,182.14,Pennsylvania,Apr
+0088,F,62,99.19,Missouri,Oct
+0089,F,19,99.31,Texas,Dec
+0090,F,21,167.62,Florida,Sep
+0091,M,18,78.1,South Dakota,Nov
+0092,M,73,190.45,Connecticut,Dec
+0093,M,24,295.46,Florida,Dec
+0094,F,48,100.78,Texas,Apr
+0095,F,48,208.52,Kansas,Oct
+0096,M,63,201.93,Alabama,Apr
+0097,M,53,224.49,New York,Oct
+0098,F,32,14.84,Massachusetts,May
+0099,F,38,9.85,New Jersey,Apr
+0100,M,23,112.03,Idaho,May

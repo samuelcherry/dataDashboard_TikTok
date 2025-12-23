@@ -153,7 +153,7 @@ const BarChart: React.FC = ({data, selection,title}) => {
     }, [data]);
 
     return (
-        <div className="container h-150  mx-auto p-6 bg-stone-100 rounded-lg shadow-lg">
+        <div className="container justify-left h-150  p-6 bg-stone-100 rounded-lg shadow-lg">
             <h2 className="text-xl font-bold text-stone-700 text-center mb-4">
                 {title}
             </h2>

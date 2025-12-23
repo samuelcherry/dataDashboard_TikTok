@@ -19,6 +19,10 @@ weights = [
     1,
     2,
 ]
+
+months = ["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"]
+
+monthWeights = [1,2,1,4,1,1,1,2,3,3,6,5]
 states = [
     "Alabama", "Alaska", "Arizona", "Arkansas", "California",
     "Colorado", "Connecticut", "Delaware", "Florida", "Georgia",
@@ -88,18 +92,20 @@ stateWeights = [
 with open(filename, "w", newline="") as f:
 
     writer = csv.writer(f)
-    writer.writerow(["id","gender","age","spend","location"])
+    writer.writerow(["id","gender","age","spend","location","month"])
     
     for i in range(1,10001):
 
         low, high = random.choices(age_ranges, weights=weights, k=1)[0]
         age = random.randint(low, high)
         location = random.choices(states,stateWeights, k=1)[0]
+        month = random.choices(months, monthWeights, k=1)[0]
         writer.writerow([
             f"{i:04d}",
             random.choices(["M","F"], weights=[0.3,0.7], k=1)[0],
             age,
             round(random.uniform(5, 300), 2),
-            location
+            location,
+            month
         ])
 print(f"{filename} created successfully")

@@ -78,7 +78,7 @@ const PieChart: React.FC = ({data, selection,title}) => {
     }, [data]);
 
     return (
-        <div className="container h-96  max-w-lg mx-auto p-6 bg-stone-100 rounded-lg shadow-lg">
+        <div className="container h-110 mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
             <h2 className="text-xl font-bold text-stone-700 text-center mb-4">
                 {title}
             </h2>

@@ -64,9 +64,6 @@ function stateSplit(arr) {
     const bucketMap = new Map();
 
     for (const row of arr) {
-     
-        console.log("row: ", row);        
-
         const location = row.location.toLowerCase();
         const spend = Math.round(Number(row.spend)*100)/100;
         const key = `${location}`;
