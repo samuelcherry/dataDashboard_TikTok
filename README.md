@@ -27,15 +27,17 @@ Or upload any CSV file that follows the required formatting
 ![Data format example](./images/csv_format.png)
 
 After the data is uploaded you can see insights and charts such as:
-    Total money spent
-    Total number of sales
-    State with most sales
-    Amount made in that state
-    Month with most sales
-    Amount made in that month
-    Bar chart of sales per state
-    Line chart of sales over time
-    Pie charts with gender and age demographic data
+
+- Total money spent
+- Total number of sales
+- State with most sales
+- Amount made in that state
+- Month with most sales
+- Amount made in that month
+- Bar chart of sales per state
+- Line chart of sales over time
+- Pie charts with gender and age demographic data
+
 
 as displayed below
 ![DataDashboard image 1](./images/dataDashboard_01.png)
