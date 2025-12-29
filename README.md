@@ -98,7 +98,9 @@ The processed outputs are combined into a single structured object and returned 
     }
   }
 }
-
+```
+```
+```
 This response format is designed to be easily consumed by frontend visualizations such as charts and dashboards.
 5. Cleanup
 
