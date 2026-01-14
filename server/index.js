@@ -24,13 +24,14 @@ app.post("/upload", upload.single("file"), (req,res) => {
             const genderSplit = await demoSplit(results);
             const locationSplit = await stateSplit(results);
             const dateSplit = await monthSplit(results);
-            
-            const processed = {genderSplit :genderSplit, locationSplit:locationSplit, dateSplit:dateSplit};
             res.json({
                 success: true,
-                data: {processed}
+                genderSplit,
+				locationSplit,
+				dateSplit
             });
             fs.unlinkSync(req.file.path);
+
         }catch (err) {
             res.status(500).json({error: err.message});
         }

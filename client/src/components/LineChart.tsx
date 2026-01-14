@@ -4,14 +4,14 @@ import {Chart, ArcElement, Tooltip} from 'chart.js/auto';
 
 Chart.register(ArcElement, Tooltip);
 
-const LineChart: React.FC = ({data, title, selection}) => {
+const LineChart: React.FC = ({data,selection}) => {
 
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const chartRef = useRef<Chart | null>(null);
 
     const Months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
  
-    const monthSplit = data.data.processed.dateSplit
+    const monthSplit = data.dateSplit
     const data00 = monthSplit[0][selection]
     const data01 = monthSplit[1][selection]
     const data02 = monthSplit[2][selection]

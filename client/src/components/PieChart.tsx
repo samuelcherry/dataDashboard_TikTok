@@ -5,7 +5,8 @@ Chart.register(ArcElement, Tooltip, Legend);
 
 
 const PieChart: React.FC = ({data, selection,title}) => {
-    const genderSplit = data.data.processed.genderSplit 
+	
+	const genderSplit = data.genderSplit 
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const chartRef = useRef<Chart | null>(null);
     

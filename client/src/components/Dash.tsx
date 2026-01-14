@@ -1,5 +1,3 @@
-import {useEffect, useState} from 'react';
-import DashContainer from './DashContainer';
 import PieChart from "./PieChart";
 import BarChart from "./BarChart";
 import LineChart from "./LineChart";
@@ -12,14 +10,11 @@ type DashProps = {
 
 export default function Dash ({data}: DashProps){
 	
-let count = ""
-let totalSpend= ""
-let avgSpend=""
 
 let dataSpendTotal = 0;
 let dataCountTotal = 0;
-let dateSplit = data.data.processed.dateSplit 
-let locationSplit = data.data.processed.locationSplit
+let dateSplit = data.dateSplit 
+let locationSplit = data.locationSplit
  
 let largestState = "";
 let largestStateValue = 0;
@@ -29,8 +24,6 @@ let largestMonth = "";
 let largestMonthValue = 0;
 let largestMonthValueDisplay = "";
 
-console.log("locationSplit", locationSplit);
-
 for (let i = 0; i < locationSplit.length; i++){
     if (locationSplit[i].spendTotal > largestStateValue){
         largestState = locationSplit[i].location;
@@ -38,8 +31,6 @@ for (let i = 0; i < locationSplit.length; i++){
         largestStateValueDisplay =`$ ${(Math.round(locationSplit[i].spendTotal *100)/100).toLocaleString()}`;     
     }
 }
-console.log("largest State Value", largestState, largestStateValue);
-
 
 for (let i = 0; i < dateSplit.length; i++){
     if (dateSplit[i].spendTotal > largestMonthValue){
@@ -48,8 +39,6 @@ for (let i = 0; i < dateSplit.length; i++){
         largestMonthValueDisplay =`$ ${( Math.round(dateSplit[i].spendTotal *100)/100).toLocaleString()}`;      
     }
 }
-
-console.log("date split", largestMonth, largestMonthValue);
 
 
 

@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/Header.tsx'
 import Dash from './components/Dash.tsx'
@@ -16,12 +14,11 @@ function App() {
         
         const res = await fetch("http://localhost:3000/upload",{
             method: "POST",
-            body: formData   
+            body: formData,   
         })
-        .then((res) => res.json())
-        .then((data) => {
-        setData(data);
-        })
+	
+		const data = await res.json();
+		setData(data);
     };
 
 return (

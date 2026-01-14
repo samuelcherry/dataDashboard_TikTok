@@ -5,7 +5,7 @@ Chart.register(ArcElement, Tooltip);
 
 
 const BarChart: React.FC = ({data, selection,title}) => {
-    const stateSplit = data.data.processed.locationSplit 
+    const stateSplit = data.locationSplit 
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const chartRef = useRef<Chart | null>(null);
     

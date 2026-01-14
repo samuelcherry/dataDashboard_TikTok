@@ -7,9 +7,6 @@ type DashProps = {
 
 export default function DashContainer({data}: DashProps) {
 
-let count = ""
-let totalSpend= ""
-let avgSpend=""
 let genderSplit = data.data.processed.genderSplit
     return (
         <>
