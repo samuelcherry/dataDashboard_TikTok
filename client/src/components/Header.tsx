@@ -1,9 +1,17 @@
 import "tailwindcss";
 
-export default function Header({uploadFile}){
+interface UploadProps{
+	uploadFile: (file:File) => Promise<void>;
+}
 
-const handleSubmit = (e) => {
-   uploadFile(e.target.files[0]);
+export default function Header({uploadFile}: UploadProps){
+
+const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
+	const file = e.target.files?.[0];
+
+	if (!file) return;
+	
+	uploadFile(file);
 };
 
   return (

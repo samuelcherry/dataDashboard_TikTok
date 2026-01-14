@@ -1,10 +1,10 @@
 import {useEffect, useRef} from 'react';
-
+import type {ChartProps} from './Dash.tsx'
 import {Chart, ArcElement, Tooltip} from 'chart.js/auto';
 
 Chart.register(ArcElement, Tooltip);
 
-const LineChart: React.FC = ({data,selection}) => {
+const LineChart = ({data,selection}:ChartProps) => {
 
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const chartRef = useRef<Chart | null>(null);
@@ -29,6 +29,7 @@ const LineChart: React.FC = ({data,selection}) => {
     useEffect(() => {
 
         const ctx = canvasRef.current?.getContext("2d");
+		if (!ctx) return;
 
         chartRef.current = new Chart(ctx, {
             type:"line",

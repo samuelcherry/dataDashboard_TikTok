@@ -1,4 +1,5 @@
-export default function InsightPanel({title, data}){
+import type {ChartProps} from './Dash.tsx'
+export default function InsightPanel({title, data}:ChartProps){
 
     return (
         <>

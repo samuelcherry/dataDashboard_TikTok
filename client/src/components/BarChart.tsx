@@ -1,10 +1,11 @@
 import {useEffect, useRef} from 'react'
 import { Chart, ArcElement, Tooltip}from 'chart.js/auto';
+import type {ChartProps} from './Dash.tsx'
 
 Chart.register(ArcElement, Tooltip);
 
 
-const BarChart: React.FC = ({data, selection,title}) => {
+const BarChart = ({data, selection,title}: ChartProps) => {
     const stateSplit = data.locationSplit 
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const chartRef = useRef<Chart | null>(null);
@@ -63,6 +64,7 @@ const BarChart: React.FC = ({data, selection,title}) => {
     useEffect(() => {
 
     const ctx = canvasRef.current?.getContext("2d");
+	if (!ctx) return;
 
     chartRef.current = new Chart(ctx, {
         type:"bar",

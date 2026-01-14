@@ -1,10 +1,13 @@
 import {useEffect, useRef} from 'react'
 import { Chart, ArcElement, Tooltip, Legend}from 'chart.js/auto';
+import type {ChartProps} from './Dash.tsx';
 
 Chart.register(ArcElement, Tooltip, Legend);
 
 
-const PieChart: React.FC = ({data, selection,title}) => {
+const PieChart = ({data, selection, title}:ChartProps) => {
+
+	console.log("title: ", title);
 	
 	const genderSplit = data.genderSplit 
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -25,6 +28,7 @@ const PieChart: React.FC = ({data, selection,title}) => {
     useEffect(() => {
 
     const ctx = canvasRef.current?.getContext("2d");
+	if (!ctx) return;
 
     chartRef.current = new Chart(ctx, {
         type:"pie",
@@ -72,7 +76,7 @@ const PieChart: React.FC = ({data, selection,title}) => {
             },
             options:{    
                 responsive: true,
-                plugins: { legends: {position: "bottom"} },    
+                plugins: { legend: {position: "bottom"} },    
             },
         });
         return () => chartRef.current?.destroy();
@@ -81,7 +85,7 @@ const PieChart: React.FC = ({data, selection,title}) => {
     return (
         <div className="flex flex-col items-center h-150 w-120 p-5 bg-white rounded-lg shadow-lg mb-5 pt-10">
             <h1 className="text-5xl font-bold text-stone-600 text-center mb-10">
-                {title}
+				{title}
             </h1>
             <canvas ref={canvasRef} width={400} height={400} />
         </div>
