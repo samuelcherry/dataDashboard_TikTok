@@ -7,12 +7,17 @@ const demoSplit = require('./demoSplit');
 const stateSplit = require("./stateSplit");
 const monthSplit = require("./monthSplit");
 
+require("dotenv").config();;
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const upload = multer({ dest: "uploads/"});
 
 app.use(express.urlencoded({ extended: true}));
-app.use(cors());
+app.use(cors({
+	origin: process.env.FRONTEND_URL,
+	credentails: true
+	})
+);
 
 app.post("/upload", upload.single("file"), (req,res) => {
     const results = [];

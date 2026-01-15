@@ -2,9 +2,11 @@ import { useState } from 'react'
 import './App.css'
 import Header from './components/Header.tsx'
 import Dash from './components/Dash.tsx'
-
+import dotenv from "dotenv"
 
 function App() {
+
+	dotenv.config()
 
     const [data, setData] = useState<any>(null);    
 
@@ -12,7 +14,7 @@ function App() {
         const formData = new FormData();
         formData.append("file", file);
         
-        const res = await fetch("http://localhost:3000/upload",{
+        const res = await fetch(process.env.VITE_API_URL,{
             method: "POST",
             body: formData,   
         })
