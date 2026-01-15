@@ -16,6 +16,7 @@
     "express": "^5.2.1",
     "fs": "^0.0.1-security",
     "multer": "^2.0.2",
+    "node-fetch": "^3.3.2",
     "nodemon": "^3.1.11",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
