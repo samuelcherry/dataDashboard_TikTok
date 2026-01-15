@@ -9,12 +9,18 @@ function App() {
 	dotenv.config()
 
     const [data, setData] = useState<any>(null);    
+	
+	const API_BASE_URL = import.meta.env.VITE_APT_URL;
 
-    const uploadFile = async(file : File) =>  {
+	if (!API_BASE_URL) {
+		throw new Error("VITE_API_URL is not defined");
+	}
+    
+	const uploadFile = async(file : File) =>  {
         const formData = new FormData();
         formData.append("file", file);
         
-        const res = await fetch(process.env.VITE_API_URL,{
+        const res = await fetch(`${API_BASE_URL}/upload`,{
             method: "POST",
             body: formData,   
         })
